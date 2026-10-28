@@ -627,7 +627,7 @@ Contáctame:
             const totalGroup = 58; let accRotation = 0;
             hyperspaceRings = [];
             for (let i = 0; i < totalGroup * 3; i++) {
-                const mat = new THREE.PointsMaterial({ size: 0.38 + Math.random() * 0.38, sizeAttenuation: true, map: sprite, alphaTest: 0.04, transparent: true, opacity: 0, color: colors[i % 3], blending: THREE.AdditiveBlending, depthWrite: false });
+                const mat = new THREE.PointsMaterial({ map: new THREE.TextureLoader().load('love.png'), transparent: true, size: 0.38 + Math.random() * 0.38, sizeAttenuation: true, map: sprite, alphaTest: 0.04, transparent: true, opacity: 0, color: colors[i % 3], blending: THREE.AdditiveBlending, depthWrite: false });
                 const ring = new THREE.Points(geo, mat);
                 ring.position.z = -10 - Math.floor(i/3) * tube * 2;
                 ring.rotation.z = accRotation + (Math.PI * 2 / 18) * (i % 3);
