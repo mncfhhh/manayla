@@ -508,7 +508,7 @@ Contáctame:
             }
             accGeo.setAttribute('position', new THREE.BufferAttribute(accPos, 3));
             accGeo.setAttribute('color', new THREE.BufferAttribute(accCol, 3));
-            accretionPoints = new THREE.Points(accGeo, new THREE.PointsMaterial({ size: 0.014, vertexColors: true, blending: THREE.AdditiveBlending, depthWrite: false }));
+            accretionPoints = new THREE.Points(accGeo, new THREE.PointsMaterial({ map: new THREE.TextureLoader().load('love.png'), transparent: true, size: 0.014, vertexColors: true, blending: THREE.AdditiveBlending, depthWrite: false }));
             scene.add(accretionPoints);
         };
 
@@ -536,7 +536,7 @@ Contáctame:
             }
             geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
             geometry.setAttribute('color',    new THREE.BufferAttribute(colors, 3));
-            material = new THREE.PointsMaterial({ size: parameters.size, sizeAttenuation: true, depthWrite: false, blending: THREE.AdditiveBlending, vertexColors: true });
+            material = new THREE.PointsMaterial({ map: new THREE.TextureLoader().load('love.png'), transparent: true, size: parameters.size, sizeAttenuation: true, depthWrite: false, blending: THREE.AdditiveBlending, vertexColors: true });
             points = new THREE.Points(geometry, material);
             scene.add(points);
         };
@@ -588,7 +588,7 @@ Contáctame:
             }
             jetGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
             jetGeometry.setAttribute('color',    new THREE.BufferAttribute(colors, 3));
-            jetMaterial = new THREE.PointsMaterial({ size: 0.056, sizeAttenuation: true, depthWrite: false, blending: THREE.AdditiveBlending, vertexColors: true, transparent: true, opacity: 0.95 });
+            jetMaterial = new THREE.PointsMaterial({ map: new THREE.TextureLoader().load('love.png'), transparent: true, size: 0.056, sizeAttenuation: true, depthWrite: false, blending: THREE.AdditiveBlending, vertexColors: true, transparent: true, opacity: 0.95 });
             jetPoints = new THREE.Points(jetGeometry, jetMaterial);
             scene.add(jetPoints);
         };
@@ -607,7 +607,7 @@ Contáctame:
                 starPos[i3+2] = r * Math.cos(phi);
             }
             starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
-            scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xaaaaaa, size: 0.04, sizeAttenuation: true, transparent: true, opacity: 0.6, depthWrite: false })));
+            scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ map: new THREE.TextureLoader().load('love.png'), transparent: true, color: 0xaaaaaa, size: 0.04, sizeAttenuation: true, transparent: true, opacity: 0.6, depthWrite: false })));
         };
 
         const generateHyperspace = () => {
