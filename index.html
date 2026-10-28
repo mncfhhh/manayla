@@ -508,7 +508,7 @@ Contáctame:
             }
             accGeo.setAttribute('position', new THREE.BufferAttribute(accPos, 3));
             accGeo.setAttribute('color', new THREE.BufferAttribute(accCol, 3));
-            accretionPoints = new THREE.Points(accGeo, new THREE.PointsMaterial({ map: new THREE.TextureLoader().load('love.png'), transparent: true, size: 0.08, vertexColors: true, blending: THREE.AdditiveBlending, depthWrite: false }));
+            accretionPoints = new THREE.Points(accGeo, new THREE.PointsMaterial({ map: new THREE.TextureLoader().load('love.png'), transparent: true, size: 0.02, vertexColors: true, blending: THREE.AdditiveBlending, depthWrite: false }));
             scene.add(accretionPoints);
         };
 
